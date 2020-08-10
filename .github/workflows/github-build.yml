@@ -9,6 +9,6 @@ jobs:
     - name: Publish to Docker Repository
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: byroncollins/speedtest
+        name: byronical/speedtest
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
