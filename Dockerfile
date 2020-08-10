@@ -1,4 +1,4 @@
-FROM registry.redhat.io/ubi8
+FROM registry.access.redhat.com/ubi8
 
 ENV USER_NAME speedtest
 ENV HOME=/home/speedtest
