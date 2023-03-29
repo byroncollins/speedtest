@@ -4,9 +4,8 @@ ENV USER_NAME speedtest
 ENV HOME=/home/speedtest
 
 RUN mkdir -p ${HOME}/bin \
-    && dnf -y --nodocs install wget \
-    && wget https://bintray.com/ookla/rhel/rpm -O bintray-ookla-rhel.repo \
-    && mv bintray-ookla-rhel.repo /etc/yum.repos.d/ \
+    && dnf -y --nodocs install curl \
+    && curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | bash \
     && dnf -y --nodocs install speedtest \
     && cd ${HOME} \
     && /usr/bin/speedtest --accept-license --accept-gdpr \
